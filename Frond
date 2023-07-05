@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User registration</title>
+</head>
+<body>
+    <h2 class="UserReg">Регистрация пользователя</h2>
+    <section class="reg">
+        <ul class="switch">
+            <li><a href="#0">Вход</a></li>
+            <li><a href="#0">Регистрация</a></li>
+        </ul>
+        
+    </section>
+</body>
+</html>
