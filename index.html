@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2 class="UserReg">Регистрация пользователя</h2>
+    <section class="avatar">
+        <h3>Выбрать фото</h3>
+    </section>
+    <section class="reg">
+        
+        <div id="LoginForm">
+            <form class="fieldset">
+
+                <div class="form-control">
+                    <lable class="form-txt">Введите логин</lable>
+                    <input class="form-control item" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="Логин">
+                </div>
+
+                <div class="form-control">
+                    <label class="form-txt">Введите почту</label>
+                    <input class="form-control item" type="email" id="email" placeholder="Email">
+                </div>
+
+                <div class="pass-group" id="password">
+                    <label class="form-txt">Введите пароль</label>
+                    <input class="form-control item" type="password" minlength="6" placeholder="Пароль" v-model="passwordUs">
+                    <label class="form-txt">Повторите пароль</label>
+                    <input class="show-control form-control item" type="password" minlength="6" placeholder="Пароль" v-model="passwordUs2">
+                    
+                    <p v-if="passwordUs !== passwordUs2" class="error-msg">Пароли не совпадают</p>
+                  </div>
+                  
+
+                <div class="form-control">
+                    <label class="form-txt">Имя</label>
+                    <input class="form-control item" type="text" id="name">
+                    <lable class="form-txt">Фамилия</lable>
+                    <input class="form-control item" type="text" id="lastname">
+                    <lable class="form-txt">Отчество</lable>
+                    <input class="form-control item" type="text" id="surname">
+
+                </div>
+
+                <div class="form-control">
+                    <lable class="form-txt">Должность</lable>
+                    <select class="form-control item">
+                        <option value="employee">Сотрудник</option>
+                        <option value="client">Клиент</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Сохранить" @click="RegUser">
+            </form>
+        </div>
+    </section>
+
+    <script src="scriptReg.js"></script>
+</body>
+</html>
